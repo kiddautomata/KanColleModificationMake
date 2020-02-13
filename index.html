@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>kancolle魔改制作模版</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="./img/logo/logo-black.png" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<style type="text/css">
+			@font-face {
+				font-family: "A-OTF-RyuminPro-Heavy";
+				src: url("./font/A-OTF-RyuminPro-Heavy.otf") format("opentype");
+			}
+			@font-face {
+				font-family: "Vani";
+				src: url("./font/Vani.ttf") format("truetype");
+			}
+		</style>
+		<script src="./js/webfont.js"></script>
+		<script src="./js/jszip.js"></script>
+		<script src="./js/FileSaver.js"></script>
+		<script src="./js/canvasAllPage.js"></script>
+	</head>
+	<body>
+		<!--
+																						  
+																						  
+									   .rUGM@B@OqLi                                       
+								   .u@B@B@B@B@B@B@B@BMr                                   
+					  :iv7vLPJ   r@B@B@B@@85uYFZ@@@B@B@BO.                                
+				   SB@B@B@B@B  rB@B@B@j            iE@B@@@M                               
+				 0@B@B@B@B@u  @B@B@O.   1B@B@@@,      rB@B@BL                             
+				B@B@BJ       .;:.,       .r@B@B@J       v@B@@0                            
+			   @@@@0                        :@@@@:        @B@B0                           
+			  ;@B@B         .@               i@@B@         @B@Bi                          
+			  SB@Bu          B.               @B@B         :@B@@                          
+			  2@B@u    :O@q. @,iF:            @@B@          @@B@,                         
+			  5B@B1      i7O:NMB@B            @B@B          YB@BL                         
+			  2@@@U        1@@@@B,            i         7@@@B@B@@@B@k                     
+			  1B@@1        B@B@B@v             .:rJu2u5,  @B@B@@@@@,                      
+			  U@B@U         q@B@BE         7B@B@B@B@B@B@O  r@@B@BU  L@BO:                 
+			  1B@B2     UOv kB@B@B@u     7@B@B@B@@@B@B@B@@.  M@B.  B@B@B@B:               
+			  U@@@2    YB@B@B@B@B@B5B   O@B@BG,               :      rB@@@Bu              
+			  1B@B5    q@B@B@B@B@B@XP  8@B@B              7            :@B@B7             
+			  U@B@2    LZ7, ;@@@B@P   .@B@@               BU            :@B@B             
+			  1B@B5          @@@@B@   FB@@1    ,r         @B             @@B@:            
+			  2@B@2         v@BMB@r@. k@@@L     X@BL      @@             MB@Bi            
+			  2B@B1         vB: @S Z  S@@@j       qB@XXB@O@:             B@B@:            
+			  2@B@2         Y@ :B  @  F@B@J          @B@B@B              BB@B:            
+			  1B@B1         B@ L@.@B. FB@Bu           7B@B@.             B@B@:            
+			  U@@@U         B; jBOB@  5@B@Y     .    vB@B@B7             @B@B:            
+			  5@@B1        .@U OB qB. FB@Bu     2:.  B@B@B@M             B@B@:            
+			  U@@@2         B: @B  O: 5@@@J     u@@@v u@B@B0         i.  BB@B:            
+			  FB@@u         @  BU  Bi SB@Bu     @@@B@B@@BMMB@.  . .:M@v  M@B@:            
+			  u@B@X         Bi @@j  . 5@@@Y  7Biu@B@B@B@B@B@@@B@B@Gri    @B@B:            
+			   B@B@         L.8M      kB@Bu   :.@B@B@B@B@@@B@B@BNr@.     B@@@:            
+			   2B@B@r                 S@B@Y     B@ Lu@@@@@B@B@@@r B@     @B@@:            
+				jB@@@B@8:    .1vrr7L  SB@@u     O   LB@B@OY7MB@M  U.     B@@@:            
+				 .G@B@@S  EM  u@B@B@, F@B@J       ;GB@B@B@r  r.@.        BB@B:            
+					rF  .B@@@.  MB@B. SB@Bu       i@@BGB@BBkPBZB@B       B@B@:            
+					   P@@B@B@N       F@@@J       r@B.v@Bk @B@B@B@P      @@@@:            
+					 u@@@@@B@B@B1     kB@Bj       2@B,@Bq  B@B@B@MS      B@B@:            
+					.SLi:@B@Br:v1:    F@B@Y       B@B@B:    B@@@@BJ      @B@B:            
+						 B@B@         XB@@j      :@MPB@:     B@@@B@M     B@@@:            
+						 jB@BM        S@B@J      .B   J@B:   @B@B@B@     @B@B:            
+						  @@@B:       q@@BJ             @Bq.  OB@BL,     M@B@:            
+						  i@B@B.      X@B@J              rB@:    ,       @B@B:            
+						   U@B@Br     i@@@@               @q             @@@@             
+							v@B@BB     @B@B@              r             B@B@S             
+							 .@B@B@Mi    ,7X5       ....i:            2@@B@O              
+							   vB@B@B@BL       ,7NB@B@B@@:  X0XqPPqMB@B@B@Y               
+								 :MB@B@B@B@B@@@B@B@B@BN   GB@B@@@B@B@B@B1                 
+									:5B@B@B@B@B@@@8L.   u@B@B@B@B@BMS7                    
+										  ..,.                                            
+																						  
+		-->
+		<div id='course' class='course-main' >
+			<div id='courseDiv' class='course-div' >
+				<h5>最后更新：2020-02-13 00:40</h5>
+				<img src='./img/logo/logo-color.png' style='width:300px;max-height:300px;margin-top:30px;'>
+				<h1>教程</h1>
+				<h4>本教程将教会你如何使用这个模版</h4>
+				<h4><a href="#"  style='color:red;' onclick='closeA()'>点击这里进入 - 魔改文件制作页面</a></h4>
+				<h4><a href="./imgBat.html">点击这里进入 - 魔改文件批处理</a></h4>
+				<h2>一、使用前说明</h2>
+				<ul class='text-ul'>
+					<li>1、本模版为
+						<a href="https://www.dmm.com/" target="_blank">DMM</a>网页游戏
+						<a href="http://rcv.ixd.dmm.com/api/surl?urid=thvy3HHW&tuid=868981a2ca32a4ead7775620984be787deb94d7b4f10aea7b311797a2a90723d" target="_blank">
+							舰队收藏
+						</a>提供缓存替换用图片的编辑模版，请勿用作其他用途
+					</li>
+					<li>2、推荐使用
+						<a href="https://daofeng.wifi169.com" target="_blank">岛风GO</a>或者
+						<a href="http://www.acggate.net/" target="_blank">ACG POWER</a>
+						加载后缀为.hack格式的缓存文件
+					</li>
+					<li>3、本模版推荐使用
+						<a href='https://www.google.cn/intl/zh-CN/chrome/' target="_blank">谷歌浏览器</a>
+					</li>
+					<li>4、请使用大于1600*900的浏览器窗口页面操作</li>
+					<li>5、使用中的任何问题请加QQ群：<a href="https://jq.qq.com/?_wv=1027&k=5dMQLGk" target="_blank">734516000</a>&nbsp;(申请填写地址栏IP)</li>
+				</ul>
+				<h2>二、上传部分</h2>
+				<ul class='text-ul'>
+					<li>1、选择舰船后，出现的改造等级的多选框中必须选中一项</li>
+					<li>2、正常状态的全身立绘和损伤状态的全身立绘，必须选择上传一张</li>
+					<li>3、其余上传部分可以按需求选择是否上传</li>
+					<li>4、进入制作界面也可以继续上传立绘图片</li>
+					<li>5、上传后即可显示此立绘可以制作的部分</li>
+				</ul>
+				<h2>三、制作部分</h2>
+				<ul class='text-ul'>
+					<li style='color:red;'>1、每个制作场景图片完成后必须点击保存（重要！）！未保存将视为未制作！</li>
+					<li>2、最上部分单选框为：素材制作场景切换</li>
+					<li>3、最下部分单选框为：角色改造等级切换</li>
+					<li>4、最下部分的查看可以确认当前制作进度</li>
+					<li>5、每个角色改造等级必须至少保存一张全身立绘图</li>
+					<li>6、未保存的部分将视为无文件</li>
+					<li>7、鼠标滚轮上下控制大小，最大100%，最小0%，改变间隔为1像素</li>
+					<li>8、鼠标滚轮左右控制旋转角度，最大180°，最小-180°，改变间隔为1像素</li>
+					<li>9、数值框可以输入小数精确改变数值（坐标文件输入框必须使用整数）</li>
+					<li>10、选中的数值框可以使用鼠标滚轮改变数值，改变间隔为1像素</li>
+				</ul>
+				<h2>四、文字部分</h2>
+				<ul class='text-ul'>
+					<li>1、舰名必须为日文汉字</li>
+					<li>2、假名必须为日文平甲或片甲</li>
+					<li>3、汉字特殊符号 ：&emsp;/ 换行&emsp;○ 特殊形状&emsp;- 特殊符号</li>
+				</ul>
+				<h2>五、下载部分</h2>
+				<ul class='text-ul'>
+					<li>1、下载为cache.zip的文件可直接作为缓存文件使用</li>
+					<li>2、下载为bat.zip的文件可作为批处理文件使用</li>
+					<li>3、bat.zip文件，将所有图片文件放入一个文件夹内方便管理</li>
+					<li>4、如需要作为缓存文件使用 上传至批处理页面导出即可</li>
+				</ul>
+				<h2>六、关于</h2>
+				<ul class='text-ul'>
+					<li>1、教程没有其他语言文本，如果您愿意提供帮助我们将非常感谢</li>
+					<li>2、其他部分文本中有文本不标准的地方请指正</li>
+					<li>3、舰船图鉴 角色名称文本设置 暂未制作</li>
+				</ul>
+				<h2>七、赞助</h2>
+					<h4>请帮助我们维持本站并为本站做出更好的体验（并留下您的联系方式）</h4>
+					<h4>未来我们将开发出更好的网站体验</h4>
+				<img src='./img/sponsor/sponsor-alipay+weixin.jpg' style='max-width:100%;max-height:100%;margin-top:30px;'>
+			</div>
+		</div>
+		<script>
+			function $(id){
+				return document.getElementById(id);
+			}
+			function closeA(){
+				$('course').remove();
+			}
+			function size(){
+				var innerWidth = window.innerWidth;
+				var innerHeight = window.innerHeight;
+				if($('course')){
+					$('course').style.width=innerWidth+'px';
+					$('course').style.height=innerHeight+'px';
+					$('courseDiv').style.height=innerHeight+'px';
+				}
+			}
+			window.onresize = function(){
+				size();	
+				if($('loadingDiv')){
+					$('loadingDiv').style.width=window.innerWidth+'px';
+					$('loadingDiv').style.height=window.innerHeight+'px';
+				}
+			};
+			window.onload = function(){
+				size();
+			};
+		</script>
+		<script src="./js/consoleLogo.js"></script>
+	</body>
+</html>

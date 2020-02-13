@@ -1,0 +1,382 @@
+{
+	"text_val":{
+		"page":[
+			"full","full_x2","special",
+			"card","banner","supply_character",
+			"character_full","character_up","remodel",
+			"album_status","position"
+		],
+		"state":["normal","damage"],
+		"fullMaterial":{
+			"room":["default_room","roomA","roomB","roomC","roomD","roomE","roomF","roomG","roomH"],
+			"ui":["none","uiA","uiB","uiC","uiD","uiE"]
+		},
+		"full_x2Material":{
+			"room":["none","wedding_room"],
+			"ui":["none","wedding_ring"]
+		},
+		"specialMaterial":{
+			"room":["battle_map"],
+			"ui":["none"]
+		},
+		"material":{
+			"shipType":["_demo",
+				"BB","CV","CVB","BBV","BCV","CVL","AV","CA","CAV","CT",
+				"CL","CLV","CLA","CLT","ECL","DD","DE","SS","SSV","LHA","AR","AO","AS",
+				"GG","BG","WG","PP","BP","WP","FF","PT","CF"
+			],
+			"rare":["c1","c2","c3","c4","c5","r1","r2","r3","sr1","sr2"],
+			"badge":["b4","b6","b8","b10"],
+			"texture":["none","white","blue","yellow","pink","red","orange"],
+			"texturePosition":["up","down"],
+			"fall":["none","sakura","star"],
+			"fontLogo":{
+				"kai":["kai","A","cv","cvKai","kaiA","kaiB","kaiC","kaiD"],
+				"kaini":[
+					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
+					"cvKaini","due","drei","zwei","mk2","mk2mod2"
+					]
+			},
+			"shipTypeBg":"ship_type_bg",
+			"bgBorderDown":"bg_border_down",
+			"bgBorderUp":"bg_border_up",
+			"borderDown":"border_down",
+			"borderUp":"border_up",
+			"border":"border"
+		},
+		"cardFontBg":{
+			"CenterTop":"center_top",
+			"CenterMiddle":"center_middle",
+			"CenterBottom":"center_bottom",
+			"LeftUp":"left_up",
+			"LeftTop":"left_top",
+			"LeftMiddle":"left_middle",
+			"LeftBottom":"left_bottom",
+			"RightMiddle":"right_middle",
+			"RightBottom":"right_down_top",
+			"RightDownMiddle":"right_down_middle",
+			"RightDownBottom":"right_down_bottom"
+		},
+		"positionMaterial":{
+			"iniScene":["boko","kaisyu","kaizo","map","ensyuf","ensyue","battle","wed"],
+			"iniState":["_n","_d"],
+			"iniPosition":["_left","_top"],
+			"iniWed":["a","b"]
+		},
+		"positionDom":{
+			"scene":["boko","kaisyu","kaizo","map","battle","ensyue","weda"],
+			"pnl":{
+				"boko":   490,
+				"kaisyu": 75,
+				"kaizo":  213,
+				"map":    -80,
+				"battle": -162,
+				"ensyue": 435,
+				"weda":   343
+			},
+			"pnt":{
+				"boko":   -89,
+				"kaisyu": -110,
+				"kaizo":  -62,
+				"map":    -93,
+				"battle": -131,
+				"ensyue": -131,
+				"weda":   -8
+			}
+		}
+	},
+	"language":{
+		"cn":"简体中文",
+		"tc":"繁體中文",
+		"en":"English",
+		"jp":"日本語"
+	},
+	"text_cn":{
+		"page":[
+			"全身","两倍全身","特殊攻击",
+			"卡牌","横幅","补给","近代化","半身","改造","文本","坐标"
+		],
+		"pageTitle":[
+			"全身立绘大小设置","卡牌立绘设置","横幅立绘设置","补给立绘设置",
+			"近代化改修 全身缩小立绘设置","舰船图鉴 角色上半身立绘设置",
+			"大规模改造 角色头像大横幅设置","舰船图鉴 角色名称文本设置",
+			"全身两倍立绘大小设置","特殊攻击立绘大小设置","坐标文件设置"
+		],
+		"pageSetting":["素材设置","角色设置","坐标设置"],
+		"uploadTitle":["全身立绘上传","两倍全身立绘上传（可选）","特殊攻击全身立绘上传（可选）"],
+		"uploadBottom":["立绘图片上传","舰船选择","请选择舰船信息","继续下一步","未选择舰船改造等级","舰船搜索"],
+		"waifu2x":["没有两倍全身立绘？点我跳转到waifu2x页面！"],
+		"checkImg":["查看","保存全部","已经制作了","全身立绘还没有保存"],
+		"settingMiddle":["您的浏览器不支持Canvas!","推荐您使用"],
+		"settingRight":[
+			"角色状态","正常状态","损伤状态","角色大小","角色旋转",
+			"文字设置","未改造","改","改二","舰名","假名",
+			"保存","下载","整数","保存为ini","保存为json","文件","关闭",
+			"角色位置","左边距","上边距","舰名文字大小","所属","类型"
+		],
+		"state":["正常","损伤"],
+		"fullMaterial":{
+			"room":["默认","咖啡室","青白色室","梅雨季室","紫阳花室","露天温泉室","圣诞节室","地炉室","被炉火锅室"],
+			"ui":["无","一式UI","一式UI改","二式UI","三式UI","三式UI改"]
+		},
+		"full_x2Material":{
+			"room":["无","婚礼室"],
+			"ui":["无","婚戒盒"]
+		},
+		"specialMaterial":{
+			"room":["战斗地图"],
+			"ui":["无"]
+		},
+		"fullText":{
+			"room":"背景家具",
+			"ui":"游戏界面"
+		},
+		"material":{
+			"shipType":["默认",
+				"战舰","正规航母","装甲航母","航空战舰","航空母舰战舰","轻型航空母舰","水上机航空母舰","重型巡洋舰","航空巡洋舰","练习巡洋舰",
+				"轻型巡洋舰","轻型航空巡洋舰","防空巡洋舰","重雷装巡洋舰","实验轻型巡洋舰","驱逐舰","海防舰","潜水舰","潜水航空母舰","登陆舰","工作舰","补给舰","潜水艇母舰",
+				"鬼","战鬼","水鬼","姬","战姬","水姬","浮游要塞","PT小鬼群","沿岸炮台"
+			],
+			"rare":["蓝色","青色","水蓝色","铁色","铜色","银色","金色","血红色","彩虹色","辉耀彩虹色"],
+			"badge":["铁十字风","花卉十二枚","花卉十六枚","旭日章风"],
+			"texture":["无","白色","蓝色","黄色","粉色","红色","橙色"],
+			"texturePosition":["云花上","云花下"],
+			"fall":["无","樱花瓣","五角星"],
+			"fontLogo":{
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kaini":[
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+				]
+			}
+		},
+		"materialText":{
+			"shipType":"舰船种类",
+			"rare":"背景稀有度",
+			"badge":"舰纹徽章",
+			"texture":"源氏云纹",
+			"fall":"飘落装饰",
+			"fontLogo":"改造图标"
+		},
+		"positionText":{
+			"scene":["母港","近代化","改造","地图","战斗","演习敌方","结婚"]
+		}
+	},
+	"text_tc":{
+		"page":[
+			"全身","兩倍全身","特殊攻擊",
+			"卡牌","橫幅","補給","近代化","半身","改造","文本","坐標"
+		],
+		"pageTitle":[
+			"全身立繪大小設置","卡牌立繪設置","横幅立繪設置","補給立繪設置",
+			"近代化改修 全身縮小立繪設置","艦船圖鑒 角色上半身立繪設置",
+			"大規模改造 角色頭像大橫幅設置","艦船圖鑒 角色名稱文本設置",
+			"全身兩倍立繪大小設置","特殊攻擊立繪大小設置","坐標文件設置"
+		],
+		"pageSetting":["素材設置","角色設置","坐標設置"],
+		"uploadTitle":["全身立繪上傳","兩倍全身立繪上傳（可選）","特殊攻擊全身立繪上傳（可選）"],
+		"uploadBottom":["立繪圖片上傳","艦船選擇","請選擇艦船信息","繼續下一步","未選擇艦船改造等級","艦船搜索"],
+		"waifu2x":["沒有兩倍全身立繪？點我跳轉到waifu2x頁面！"],
+		"checkImg":["查看","保存全部","已經製作了","全身立繪還沒有保存"],
+		"settingMiddle":["您的瀏覽器不支持Canvas!","推薦您使用"],
+		"settingRight":[
+			"角色狀態","正常狀態","損傷狀態","角色大小","角色旋轉",
+			"文字設置","未改造","改","改二","艦名","假名",
+			"保存","下載","整數","保存為ini","保存為json","文件","關閉",
+			"角色位置","左邊距","上邊距","艦名文字大小","所屬","類型"
+		],
+		"state":["正常","損傷"],
+		"fullMaterial":{
+			"room":["默認","咖啡室","青白色室","梅雨季室","紫陽花室","露天溫泉室","耶誕節室","地爐室","被爐火鍋室"],
+			"ui":["無","壹式UI","壹式UI改","贰式UI","叁式UI","叁式UI改"]
+		},
+		"full_x2Material":{
+			"room":["無","婚禮室"],
+			"ui":["無","婚戒盒"]
+		},
+		"specialMaterial":{
+			"room":["戰鬥地圖"],
+			"ui":["無"]
+		},
+		"fullText":{
+			"room":"背景家具",
+			"ui":"遊戲界面"
+		},
+		"material":{
+			"shipType":["默认",
+				"戰艦","正規航母","裝甲航母","航空戰艦","航空母艦戰艦","輕型航空母艦","水上機航空母艦","重型巡洋艦","航空巡洋艦","練習巡洋艦",
+				"輕型巡洋艦","輕型航空巡洋艦","防空巡洋艦","重雷裝巡洋艦","実験輕型巡洋艦","驅逐艦","海防艦","潛水艦","潛水航空母艦","登陸艦","工作艦","補給艦","潛水艇母艦",
+				"鬼","戰鬼","水鬼","姬","戰姬","水姬","浮游要塞","PT小鬼群","沿岸砲台"
+			],
+			"rare":["藍色","青色","水藍色","鐵色","銅色","銀色","金色","血紅色","彩虹色","輝耀彩虹色"],
+			"badge":["鐵拾字風","花卉拾貳枚","花卉拾陸枚","旭日章風"],
+			"texture":["無","白色","藍色","黄色","粉色","紅色","橙色"],
+			"texturePosition":["雲花上","雲花下"],
+			"fall":["无","櫻花瓣","五角星"],
+			"fontLogo":{
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kaini":[
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+				]
+			}
+		},
+		"materialText":{
+				"shipType":"艦船種類",
+				"rare":"背景稀有度",
+				"badge":"艦紋徽章",
+				"texture":"源氏雲紋",
+				"fall":"飄落裝飾",
+				"fontLogo":"改造圖標"
+			},
+		"positionText":{
+			"scene":["母港","近代化","改造","地圖","戰鬥","演習敵方","結婚"]
+		}
+	},
+	"text_en":{
+		"page":[
+			"Full","Two times figure","Special attack",
+			"Card","Banner","Supply","Customize","Top figure","Remodel","Text","Coordinate"
+		],
+		"pageTitle":[
+			"Character full figure size settings","Character card settings","Character banner settings","Character supply settings",
+			"Customize smaller full figure size settings","Ship manual Character top figure settings",
+			"Remodel Character portrait banner settings","Ship manual Character name text settings",
+			"Character two times figure size settings","Special attack full figure size settings","Coordinate file settings"
+		],
+		"pageSetting":["Material settings","Character settings","Coordinate settings"],
+		"uploadTitle":["Character full figure image upload","Character two times figure image upload (Optional)","Special attack full figure image upload (Optional)"],
+		"uploadBottom":["Role image upload","ship selection","Select ship information","Continue to the next step","Ship modification level not selected","Search ship information"],
+		"waifu2x":["Without two times figure image？Click me to jump to Waifu 2x page！"],
+		"checkImg":["Check","Save all","have made","The character's full figure picture hasn't been saved"],
+		"settingMiddle":["Canvas is not supported in your browser!","We recommend you to use"],
+		"settingRight":[
+			"Character status","Normal status","Damage status","Character size","Character rotation",
+			"Text settings","None","Kai","Kaini","Ship name","Kana name",
+			"Save","Download","Integer","Save as ini","Save as json","File","Close",
+			"Character position","Left margin","Top margin","Ship name size","Belong","Type"
+		],
+		"state":["Normal","Damage"],
+		"fullMaterial":{
+			"room":["Default","Coffee room","Bluish white room","Plum rainy season room","Ziyang flower room","Outdoor hot spring room","Christmas Room","Furnace chamber","Hot pot room"],
+			"ui":["None","UI style 1","UI style 1 plus","UI style 2","UI style 3","UI style 3 plus"]
+		},
+		"full_x2Material":{
+			"room":["None","Wedding room"],
+			"ui":["None","Wedding box"]
+		},
+		"specialMaterial":{
+			"room":["Battle map"],
+			"ui":["None"]
+		},
+		"fullText":{
+			"room":"Background furniture",
+			"ui":"Game interface"
+		},
+		"material":{
+			"shipType":["Default",
+				"Battleship","Aircraft carrier","Armored aircraft carrier","Aviation warship","Battle aircraft carrier",
+				"Aircraft carrier light","Seaplane carrier","Heavy cruiser","Aircraft cruiser","Training cruiser",
+				"Light cruiser","Light aircraft cruiser","Anti-aircraft cruiser","Torpedo Cruiser","Experimental Light Cruiser",
+				"Destroyer","Escort","Submarine","Aircraft cruiser submarine","Amphibious assault ship","Repair ship","Fleet oiler","Submarine tender",
+				"Ghost","Battleship ghost","Water ghost","Princess","Battleship princess","Water princess","Floating fortress","Patrol torpedo boat","coast fortress"
+			],
+			"rare":["Bule","Cyan","Water blue","Iron ","Coppery ","Silver ","Golden","Bloody ","Iridescent","Shine iridescent"],
+			"badge":["Iron cross style","Twelve petals","Sixteen petals","Sun badge style"],
+			"texture":["None","White","Bule","Yellow","Pink","Red","Orange"],
+			"texturePosition":[" cloud texture above"," cloud texture below"],
+			"fall":["None","Sakura petals","Five-pointed star"],
+			"fontLogo":{
+				"kai":["kai","A","CV","CVkai","Akai","Bkai","Ckai","Dkai"],
+				"kaini":[
+					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
+					"cvkaini","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+				]
+			}
+		},
+		"materialText":{
+			"shipType":"Ship type",
+			"rare":"Background rarity",
+			"badge":"Warship badge",
+			"texture":"Genji texture",
+			"fall":"Decoration",
+			"fontLogo":"Font logo"
+		},
+		"positionText":{
+			"scene":["Port","Customize","Remodel","Map","Battle","ExerciseEnemy","Wedding"]
+		}
+	},
+	"text_jp":{
+		"page":[
+			"全身","两倍全身","特殊攻撃",
+			"カード","横幅","补给","近代化","半身","改造","文本","座標"
+		],
+		"pageTitle":[
+			"全身立ち絵大小設定","カード立绘設定","横幅立ち絵設定","补给立绘設定",
+			"近代化改修 全身缩小立绘設定","艦船図鑑 カード上半身立绘設定",
+			"大规模改造 カード頭の大横幅設定","艦船図鑑 キャラの名前文本設定",
+			"全身两倍立ち絵大小設定","特殊攻撃立ち絵大小設定","座標ファイル設定"
+		],
+		"pageSetting":["素材の設定","キャラの設定","座標の設定"],
+		"uploadTitle":["全身立ち絵アップロード","两倍全身立ち絵アップロード(オプション)","特殊攻撃全身立ち絵アップロード(オプション)"],
+		"uploadBottom":["立ち絵写真アップロード","艦船選択","艦船の情報を選択ください","続く","艦船改造等級未選択","艦船検索"],
+		"waifu2x":["两倍全身立ち絵はない。こちをタップしてwaifu2x画面へ行きます！"],
+		"checkImg":["チェック","保存全部","もう完成した","全身立ち絵まだ保存しません"],
+		"settingMiddle":["このブラウザはcanvasを支持しません!","おすすめは"],
+		"settingRight":[
+			"キャラ状態","正常状態","損傷状態","キャラ大小","キャラ回転",
+			"文字設定","未改造","改","改二","艦名","仮名",
+			"保存","ダウンロード","整数","保存iniで","保存jsonで","ファイル","閉じる",
+			"キャラ位置","左の距離","上の距離","艦名大小","所属","種類"
+		],
+		"state":["正常","損傷"],
+		"fullMaterial":{
+			"room":["ディフォルト","喫茶店","青白い部屋","梅雨室","紫陽花室","露天風呂","クリスマス ルーム","囲炉裏室","こたつ鍋室"],
+			"ui":["無","一式UI","一式UI改","二式UI","三式UI","三式UI改"]
+		},
+		"full_x2Material":{
+			"room":["無","結婚式場"],
+			"ui":["無","結婚指輪の箱"]
+		},
+		"specialMaterial":{
+			"room":["戦闘地図"],
+			"ui":["無"]
+		},
+		"fullText":{
+			"room":"背景家具",
+			"ui":"遊戯界面"
+		},
+		"material":{
+			"shipType":["ディフォルト",
+				"戦艦","正規空母","装甲空母","航空戦艦","改装航空戦艦","軽空母","水上機母艦",
+				"重巡洋艦","航空巡洋艦","練習巡洋艦","軽巡洋艦","軽(航空)巡洋艦","重雷装巡洋艦","実験輕型巡洋艦",
+				"駆逐艦","海防艦","潜水艦","潜母","揚陸艦","工作艦","補給艦","潜水母艦",
+				"鬼","戦鬼","水鬼","姫","戦姫","水姫","浮游要塞","PT小鬼群","沿岸砲台"
+			],
+			"rare":["青色","空色","水色","鉄色","銅色","銀色","金色","血の色","虹色","輝く虹色"],
+				"badge":["鉄十字風","花弁十二枚","花弁十六枚","旭日章風"],
+				"texture":["無","白色","青色","黄色","粉色","紅色","橙色"],
+				"texturePosition":["雲花上","雲花下"],
+				"fall":["無","桜の花びら","五角星"],
+			"fontLogo":{
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kaini":[
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+				]
+			}
+		},
+		"materialText":{
+			"shipType":"艦種",
+			"rare":"レアリティ",
+			"badge":"勲章",
+			"texture":"源氏雲紋章",
+			"fall":"レア度飾り",
+			"fontLogo":"改造アイコン"
+		},
+		"positionText":{
+			"scene":["母港"," 近代化","改造","出撃","戦闘","演習敵","結婚"]
+		}
+	},
+	"update":"2019-12-29 11-40"
+}
