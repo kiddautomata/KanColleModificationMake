@@ -20,7 +20,7 @@
 			"ui":["none"]
 		},
 		"material":{
-			"shipType":["_demo",
+			"shipType":["default_type",
 				"BB","CV","CVB","BBV","BCV","CVL","AV","CA","CAV","CT",
 				"CL","CLV","CLA","CLT","ECL","DD","DE","SS","SSV","LHA","AR","AO","AS",
 				"GG","BG","WG","PP","BP","WP","FF","PT","CF"
