@@ -28,23 +28,25 @@
 	</style>
 	<body>
 		<div class='main-div'>
-			<h1>魔改文件批处理</h1>
-			<h3>本页面适用于魔改制作页面导出的bat.zip文件批处理成缓存直接使用的文件</h3>
+			<h1>图片文件批处理</h1>
+			<h3>本页面适用于魔改制作页面导出的bat.zip文件格式批处理成缓存直接使用的文件格式</h3>
 			<h4>请将bat.zip中的文件解压 再上传至此页面</h4>
 			<h4><a href="./index.html">点击这里进入 - 魔改文件制作页面</a></h4>
 			<h4>
 			文件夹命名规则：<br>
-			ship为固定字段,0000为舰船ID,如果你需要添加其他备注文字请在下划线“_”后添加 <br>
+			文件夹格式：ship为固定字段,0000为舰船ID
+			文件格式：full.png等 为固定图片名称
+			如果你需要添加其他备注文字请在下划线“_”后添加 <br>
 			例： <br>
 			ship/0000/full.png <br>
-			ship_自定义文件夹名称/0000_自定义文件夹名称/full.png <br>
+			ship_自定义文件夹名称/0000_自定义文件夹名称/full_自定义文件名称.png <br>
 			0000/full.png <br>
 			0000_自定义文件夹名称/full.png <br>
 			</h4>
 			<div id='upload-div'>
-				<h3>请上传ship文件夹：</h3><input class="" type="file" name="file" id="upLoad" multiple="multiple" webkitdirectory directory onchange='uploadImg()' />
+				<h3>请上传ship文件夹：</h3><input class="" type="file" name="file" id="upLoad" multiple="multiple" webkitdirectory directory onchange='uploadResource()' />
 			</div>
-			<div id='imgDiv'></div>
+			<div id='resourceDiv'></div>
 		</div>
 		<script>
 			var jsonData;
@@ -65,11 +67,11 @@
 				'remodel_dmg', 'reward_card', 'reward_icon', 'special', 'supply_character', 'supply_character_dmg', 'text_class',
 				'text_name', 'text_remodel_mes'
 			];
-			var imgData = [];
+			var resourceData = [];
 
-			function uploadImg() {
-				imgData = [];
-				var div = document.getElementById("imgDiv");
+			function uploadResource() {
+				resourceData = [];
+				var div = document.getElementById("resourceDiv");
 				var childs = div.childNodes;
 				if (childs) {
 					for (var i = childs.length - 1; i >= 0; i--) {
@@ -78,7 +80,7 @@
 				}
 				const fileId = document.getElementById("upLoad");
 				if (fileId.files == undefined) {
-					return
+					return;
 				}
 				let fileLength = fileId.files.length;
 				for (i = 0; i < fileLength; i++) {
@@ -86,10 +88,11 @@
 					let files = fileId.files[i];
 					let filesName = files.name;
 					let FileType = filesName.substring(filesName.lastIndexOf(".") + 1).toLowerCase();
+					filesName = findUnderline(filesName);
 					let filesMap = files.webkitRelativePath;
 					let filesShipId, filesShipFolder;
 					let fatherFolderName = filesMap.substring(0, filesMap.indexOf("/"));
-					fatherFolderName = fatherFolderName.substring(0, fatherFolderName.indexOf("_"))
+					fatherFolderName = findUnderline(fatherFolderName);
 					let mainFolderTextNum = (filesMap.split('/')).length - 1;
 					if (fatherFolderName == 'ship' && mainFolderTextNum == 2) {
 						filesMap = filesMap.substring(filesMap.indexOf("/") + 1);
@@ -97,25 +100,33 @@
 					} else if (mainFolderTextNum == 1) {
 						subInfo()
 					} else {
-						document.getElementById('imgDiv').innerHTML += '<p class="text-failure">上传的第' + i + '个文件命名格式错误，路径为：' + files.webkitRelativePath +
-							'</p>'
+						document.getElementById('resourceDiv').innerHTML +=
+						 '<p class="text-failure">上传的第' 
+						 + l + '个文件命名格式错误，路径为：'
+						  + files.webkitRelativePath +'</p>'
 					}
-
-					function subInfo() {
-						let firstFilesShipId = filesMap.substring(0, filesMap.indexOf("/"));
-						let shipNameTxt = firstFilesShipId.substring(firstFilesShipId.indexOf("_") + 1, firstFilesShipId.indexOf("_"));
-						if (shipNameTxt == '_') {
-							filesShipId = firstFilesShipId.substring(0, firstFilesShipId.indexOf("_"))
+					function findUnderline(a){
+						let l = a.substring(a.lastIndexOf("_"), a.lastIndexOf("_") + 1);
+						if( l == '_' ){
+							return a.substring(0, a.lastIndexOf("_"));
 						} else {
-							filesShipId = firstFilesShipId
+							return a;
 						}
+					}
+					function subInfo() {
+						filesShipId = filesMap.substring(0, filesMap.indexOf("/"));
+						filesShipId = findUnderline(filesShipId);
 						if (/^[0-9]+$/.test(filesShipId)) {
 							filesShipFolder = filesMap.substring(filesMap.lastIndexOf("/") + 1, filesMap.lastIndexOf("."));
-							document.getElementById('imgDiv').innerHTML += '<p class="text-success">上传的第' + i + '个文件成功，路径为：' + files.webkitRelativePath +
-								'</p>'
+							document.getElementById('resourceDiv').innerHTML +=
+							 '<p class="text-success">上传的第' 
+							 + l + '个文件成功，路径为：' 
+							 + files.webkitRelativePath +'</p>'
 						} else {
-							document.getElementById('imgDiv').innerHTML += '<p class="text-failure">上传的第' + i + '个文件命名格式错误，路径为：' + files.webkitRelativePath +
-								'</p>'
+							document.getElementById('resourceDiv').innerHTML +=
+							 '<p class="text-failure">上传的第' 
+							 + l + '个文件命名格式错误，路径为：' 
+							 + files.webkitRelativePath +'</p>'
 						}
 					}
 					if (filesShipId && filesShipFolder) {
@@ -124,7 +135,7 @@
 							imgReader.readAsDataURL(files);
 							imgReader.onload = function() {
 								let imgResult = this.result;
-								imgData.push({
+								resourceData.push({
 									'id': filesShipId,
 									'folder': filesShipFolder,
 									'base64': imgResult
@@ -135,12 +146,18 @@
 							iniReader.readAsText(files, "UTF-8");
 							iniReader.onload = function() {
 								let iniResult = this.result;
-								imgData.push({
+								resourceData.push({
 									'id': filesShipId,
 									'folder': filesShipFolder,
 									'config': iniResult
 								})
 							}
+						} else {
+							document.getElementById('resourceDiv').innerHTML += 
+							'<p class="text-failure">上传的第' 
+							+ l + '个文件类型错误，格式为：'
+							+ FileType +'，路径为：' 
+							+ files.webkitRelativePath +'</p>'
 						}
 					}
 				}
@@ -148,7 +165,7 @@
 					document.getElementById('upload-div').innerHTML +=
 						'<input type="button" id="downloadZip" value="下载cahce zip" onclick="downloadZip()"/>'
 				}
-				document.getElementById('upLoad').value = ''
+				document.getElementById('upLoad').value = '';console.log(resourceData);
 			}
 			window.getTime = function() {
 				let d = new Date();
@@ -162,27 +179,26 @@
 					}
 				}
 				return t = d.getFullYear() + '-' + addZero(d.getMonth()) + '-' + addZero(d.getDate()) + ' ' + addZero(d.getHours()) +
-					'.' + addZero(d.getMinutes()) + '.' + addZero(d.getSeconds())
+					'.' + addZero(d.getMinutes()) + '.' + addZero(d.getSeconds());
 			}
-
 			function downloadZip() {
 				var zip = new JSZip();
 				var imgFolder = zip.folder("cache/kcs2/resources/ship/");
 				var iniFolder = zip.folder("cache/kcs/resources/swf/ships/");
 				for (i = 0; i < jsonData.length; i++) {
-					for (j = 0; j < imgData.length; j++) {
-						if (jsonData[i].id == imgData[j].id) {
-							let key = imgData[j].folder;
+					for (j = 0; j < resourceData.length; j++) {
+						if (jsonData[i].id == resourceData[j].id) {
+							let key = resourceData[j].folder;
 							for (o in jsonData[i]) {
 								if (o == key) {
-									let basedata = imgData[j]['base64'].substring(imgData[j]['base64'].indexOf(",") + 1);
+									let basedata = resourceData[j]['base64'].substring(resourceData[j]['base64'].indexOf(",") + 1);
 									imgFolder.file(key + "/" + jsonData[i][key] + '.hack.png', basedata, {
 										base64: true
 									})
 								}
 							}
 							if (key == 'config') {
-								iniFolder.file(jsonData[i]['filename'] + '.config.ini', imgData[j]['config'])
+								iniFolder.file(jsonData[i]['filename'] + '.config.ini', resourceData[j]['config']);
 							}
 						}
 					}
@@ -191,7 +207,7 @@
 					type: "blob"
 				}).then(function(content) {
 					var time = getTime();
-					saveAs(content, time + ' ' + "cache.zip")
+					saveAs(content, time + ' ' + "cache.zip");
 				})
 			}
 		</script>
