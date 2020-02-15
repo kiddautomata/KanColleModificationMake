@@ -6703,6 +6703,7 @@ function createUploadPage(now, shipId) {
 	const shipSelectText = uploadBottomText[1];
 	const shipSearchText = uploadBottomText[5];
 	const pleaseSelectText = uploadBottomText[2];
+	const pleaseSearchText = uploadBottomText[6];
 	const waifu2xText = textVal.waifu2x;
 	const notChoice = uploadBottomText[4];
 	if (now == 'x1') {
@@ -6810,7 +6811,10 @@ function createUploadPage(now, shipId) {
 			'dom': 'input',
 			'appendId': ['shipSearchDiv'],
 			'id': 'shipSearch',
-			'className': ['ship-search']
+			'className': ['ship-search'],
+			'setAttribute':{
+				'placeholder': pleaseSearchText
+			}
 		});
 		createElement({
 			'dom': 'br',
