@@ -6883,10 +6883,10 @@ function createUploadPage(now, shipId) {
 			}
 		}
 		function createShipSelectInput(value){
-			var vid = value.substring(0, value.indexOf(" "));
+			var vid = value.substring(0,value.indexOf(" "));
 			var aid = value.substring(value.indexOf(" ")+1);
-			var nid = aid.substring(0,aid.indexOf(" "));
-			var yid = aid.substring(aid.indexOf(" ")+1);
+			var nid = aid.substring(0,aid.lastIndexOf(" "));
+			var yid = aid.substring(aid.lastIndexOf(" ")+1);
 			window.shipName = {};
 			shipName.name = nid;
 			shipName.yomi = yid;
