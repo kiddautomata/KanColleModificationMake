@@ -7608,7 +7608,7 @@ window.getTime = function() {
 			return a;
 		}
 	};
-	return t = d.getFullYear() + '-' + addZero(d.getMonth()) + '-' + addZero(d.getDate()) + ' ' + addZero(d.getHours()) +
+	return t = d.getFullYear() + '-' + addZero(d.getMonth()+1) + '-' + addZero(d.getDate()) + ' ' + addZero(d.getHours()) +
 		'.' + addZero(d.getMinutes()) + '.' + addZero(d.getSeconds());
 };
 window.downloadCacheZip = function() {
@@ -7673,7 +7673,9 @@ window.downloadBatZip = function() {
 					base64: true
 				});
 			} else if (j == 'position' && imgData[lv].position.ini != undefined && imgData[lv].position.json != undefined) {
-				shipFolder.file(addZero(imgData[lv]['id']) + '_' + imgData[lv]['name'] + '/config.ini', imgData[lv][j]['ini']);
+				for(l in imgData[lv][j]){
+					shipFolder.file( addZero(imgData[lv]['id']) + '_' + imgData[lv]['name'] + '/config.' + l, imgData[lv][j][l]);
+				}//for
 			}
 		};
 	};
