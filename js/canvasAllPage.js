@@ -6411,6 +6411,9 @@ function canvasPositionPage(page, lang, local) {
 		let arrText = [];
 		for (i = 0; i < tl; i++) {
 			let saveText = dataText.getElementsByTagName("p")[i].innerHTML;
+			if(a=='json'&&i==tl-1){
+				saveText = saveText.replace(/(.*),/, '$1');
+			}
 			arrText.push(saveText);
 		};
 		if (a == 'ini') {
@@ -6419,9 +6422,10 @@ function canvasPositionPage(page, lang, local) {
 			return strText
 		} else if (a == 'json') {
 			strText = arrText.join("\r\n    ");
+			console.log(strText);
 			strL =
 				'{\r\n  "api_mst_ship":{\r\n    "api_name":false,\r\n    "api_getmes":false,\r\n    "api_sinfo":false\r\n  },\r\n  "api_mst_shipgraph":{\r\n    ';
-			strR = '\r\n  };\r\n};\r\n';
+			strR = '\r\n  }\r\n}\r\n';
 			strText = strL + strText + strR;
 			return strText
 		}
