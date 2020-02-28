@@ -6301,13 +6301,9 @@ function canvasPositionPage(page, lang, local) {
 				};
 
 				function checkIniCharacter() {
-					if (window.imgDataNx2 != undefined && window.imgDataDx2 != undefined) {
+					if ( dataState[s] == 'normal' && dataScene[f] == 'kaisyu') {
 						checkIniPosition()
-					} else if (window.imgDataNx2 != undefined && window.imgDataDx2 == undefined && dataState[s] == 'normal' &&
-						dataScene[f] == 'kaisyu') {
-						checkIniPosition()
-					} else if (window.imgDataNx2 == undefined && window.imgDataDx2 != undefined && dataState[s] == 'damage' &&
-						dataScene[f] == 'kaisyu') {
+					} else if ( dataState[s] == 'damage' && dataScene[f] == 'kaisyu') {
 						checkIniPosition()
 					} else if (dataScene[f] != 'kaisyu') {
 						checkIniPosition()
@@ -6316,9 +6312,9 @@ function canvasPositionPage(page, lang, local) {
 
 				function checkIniPosition() {
 					if (iniPosition[t] == '_left') {
-						echoIni(iniScene[f], iniState[s], iniPosition[t], iniWed[s], 'x')
+						echoIni(iniScene[f], iniState[s], iniPosition[t], iniWed[s], 'x');
 					} else if (iniPosition[t] == '_top') {
-						echoIni(iniScene[f], iniState[s], iniPosition[t], iniWed[s], 'y')
+						echoIni(iniScene[f], iniState[s], iniPosition[t], iniWed[s], 'y');
 					}
 				};
 			};
@@ -6328,12 +6324,12 @@ function canvasPositionPage(page, lang, local) {
 				var f = fVal(b);
 				if (a == 'wed') {
 					if (d != 'b') {
-						echoId.innerHTML += '<p>' + a + d + c + '=' + -log[page][a + d]['normal'][e] + '</p>'
+						echoId.innerHTML += '<p>' + a + d + c + '=' + -log[page][a + d]['normal'][e] + '</p>';
 					}
 				} else if (a == 'ensyuf') {
-					echoId.innerHTML += '<p>' + a + b + c + '=' + log[page]['battle'][f][e] + '</p>'
+					echoId.innerHTML += '<p>' + a + b + c + '=' + log[page]['battle'][f][e] + '</p>';
 				} else {
-					echoId.innerHTML += '<p>' + a + b + c + '=' + log[page][a][f][e] + '</p>'
+					echoId.innerHTML += '<p>' + a + b + c + '=' + log[page][a][f][e] + '</p>';
 				}
 			};
 		};
@@ -6354,13 +6350,9 @@ function canvasPositionPage(page, lang, local) {
 				};
 
 				function checkJsonCharacter() {
-					if (imgDataNx2 != undefined && imgDataDx2 != undefined) {
+					if (dataState[s] == 'normal' && dataScene[f] == 'kaisyu') {
 						echoJson(iniScene[f], iniState[s], iniWed[s])
-					} else if (imgDataNx2 != undefined && imgDataDx2 == undefined && dataState[s] == 'normal' && dataScene[f] ==
-						'kaisyu') {
-						echoJson(iniScene[f], iniState[s], iniWed[s])
-					} else if (imgDataNx2 == undefined && imgDataDx2 != undefined && dataState[s] == 'damage' && dataScene[f] ==
-						'kaisyu') {
+					} else if (dataState[s] == 'damage' && dataScene[f] == 'kaisyu') {
 						echoJson(iniScene[f], iniState[s], iniWed[s])
 					} else if (dataScene[f] != 'kaisyu') {
 						echoJson(iniScene[f], iniState[s], iniWed[s])
@@ -6372,22 +6364,18 @@ function canvasPositionPage(page, lang, local) {
 				const echoId = document.getElementById(id);
 				var f = fVal(b);
 				if (a == 'ensyuf') {
-					echoId.innerHTML += '<p>\"api_' + a + b + '\":[' + log[page]['battle'][f].x + ',' + log[page]['battle'][f].y +
-						'],</p>'
+					echoId.innerHTML += '<p>\"api_' + a + b + '\":[' + log[page]['battle'][f].x + ',' + log[page]['battle'][f].y +'],</p>';
 				} else if (a == 'wed') {
-					echoId.innerHTML += '<p>\"api_' + a + 'a\":[' + -log[page][a + 'a'][f].x + ',' + -log[page][a + 'a'][f].y +
-						'],</p>'
+					echoId.innerHTML += '<p>\"api_' + a + 'a\":[' + -log[page][a + 'a'][f].x + ',' + -log[page][a + 'a'][f].y +'],</p>';
 				} else {
-					echoId.innerHTML += '<p>\"api_' + a + b + '\":[' + log[page][a][f].x + ',' + log[page][a][f].y + '],</p>'
+					echoId.innerHTML += '<p>\"api_' + a + b + '\":[' + log[page][a][f].x + ',' + log[page][a][f].y + '],</p>';
 				}
 			};
 		};
 		if (id == 'ini') {
 			iniFun(id);
-			console.log(getText(id))
 		} else if (id == 'json') {
 			jsonFun(id);
-			console.log(getText(id))
 		} else if (id == 'all') {
 			createElement({
 				'dom': 'div',
@@ -6414,17 +6402,16 @@ function canvasPositionPage(page, lang, local) {
 				}
 			});
 			jsonFun(id);
-			imgData[imgData.level].position['json'] = getText('json')
-		}; /*createElement({'dom': 'div','appendId': [id],'id': 'downloadInput'});createElement({'dom': 'input','appendId': ['downloadInput'],'id': id + 'Down','className': ['export_div_button'],'type': 'button','value': settingRightText[12] + settingRightText[16],'setAttribute': {}});if (document.getElementById('allDown')) {document.getElementById('allDown').onclick = function() {downloadExport("shipcode.config.ini", imgData[imgData.level].position['ini']);downloadExport("shipcode.config.json", imgData[imgData.level].position['json'])}}else {downloadExport("shipcode.config." + id + ",getText(" + id + ")")};*/
+			imgData[imgData.level].position['json'] = getText('json');
+		};
 	};
 	window.getText = function(a) {
-		let tl = document.getElementById(a).children.length;
-		tl = tl - 2;
+		let tl = document.getElementById(a).childNodes.length;
 		let dataText = document.getElementById(a);
 		let arrText = [];
 		for (i = 0; i < tl; i++) {
 			let saveText = dataText.getElementsByTagName("p")[i].innerHTML;
-			arrText.push(saveText)
+			arrText.push(saveText);
 		};
 		if (a == 'ini') {
 			strText = arrText.join("\r\n");
