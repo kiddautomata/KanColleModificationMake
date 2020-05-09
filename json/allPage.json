@@ -34,7 +34,7 @@
 				"kai":["kai","A","cv","cvKai","kaiA","kaiB","kaiC","kaiD"],
 				"kaini":[
 					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
-					"cvKaini","due","drei","zwei","mk2","mk2mod2"
+					"cvKaini","due","drei","zwei","mk2","mk2mod2","andra"
 					]
 			},
 			"shipTypeBg":"ship_type_bg",
@@ -146,7 +146,7 @@
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
-					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
 		},
@@ -217,7 +217,7 @@
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
-					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
 		},
@@ -290,7 +290,7 @@
 				"kai":["kai","A","CV","CVkai","Akai","Bkai","Ckai","Dkai"],
 				"kaini":[
 					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
-					"cvkaini","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+					"cvkaini","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
 		},
@@ -362,7 +362,7 @@
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
-					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2"
+					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
 		},
