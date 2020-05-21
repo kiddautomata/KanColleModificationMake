@@ -31,7 +31,7 @@
 			"texturePosition":["up","down"],
 			"fall":["none","sakura","star"],
 			"fontLogo":{
-				"kai":["kai","A","cv","cvKai","kaiA","kaiB","kaiC","kaiD"],
+				"kai":["kai","A","cv","cvKai","kaiA","kaiB","kaiC","kaiD","mod2"],
 				"kaini":[
 					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
 					"cvKaini","due","drei","zwei","mk2","mk2mod2","andra"
@@ -143,7 +143,7 @@
 			"texturePosition":["云花上","云花下"],
 			"fall":["无","樱花瓣","五角星"],
 			"fontLogo":{
-				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
@@ -214,7 +214,7 @@
 			"texturePosition":["雲花上","雲花下"],
 			"fall":["无","櫻花瓣","五角星"],
 			"fontLogo":{
-				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
@@ -287,7 +287,7 @@
 			"texturePosition":[" cloud texture above"," cloud texture below"],
 			"fall":["None","Sakura petals","Five-pointed star"],
 			"fontLogo":{
-				"kai":["kai","A","CV","CVkai","Akai","Bkai","Ckai","Dkai"],
+				"kai":["kai","A","CV","CVkai","Akai","Bkai","Ckai","Dkai","Mod.2"],
 				"kaini":[
 					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
 					"cvkaini","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
@@ -359,7 +359,7 @@
 				"texturePosition":["雲花上","雲花下"],
 				"fall":["無","桜の花びら","五角星"],
 			"fontLogo":{
-				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改"],
+				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
 					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
