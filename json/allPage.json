@@ -76,7 +76,7 @@
 			},
 			"pnt":{
 				"boko":   -89,
-				"kaisyu": -110,
+				"kaisyu": 110,
 				"kaizo":  -62,
 				"map":    -93,
 				"battle": -131,
