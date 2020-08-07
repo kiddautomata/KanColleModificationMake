@@ -178,6 +178,11 @@
 									vocFolder.file("kc" + jsonData[i].filename + "/" + jsonData[i]['sound'][key] + '.hack.mp3', basedata, {
 										base64: true
 									})
+								}else if(o != key) {
+									let basedata = voiceData[j]['base64'].substring(voiceData[j]['base64'].indexOf(",") + 1);
+									vocFolder.file("kc" + jsonData[i].filename + "/" + voiceData[j].folder + '.hack.mp3', basedata, {
+										base64: true
+									})
 								}
 							}
 						}

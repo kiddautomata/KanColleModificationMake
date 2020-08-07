@@ -6757,7 +6757,7 @@ function createUploadPage(now, shipId) {
 				} else {
 					enemyRepe++;
 					enemyAllInfo[enemyAllInfo.length - 1][enemyRepe] = shipData[i].id
-				}
+				};
 			};
 		};
 		shipSelectInfo = shipSelectInfo.concat(enemySelectInfo);
@@ -6771,9 +6771,18 @@ function createUploadPage(now, shipId) {
 						};
 					};
 				};
-				for(o in shipAllInfo[j]){
-					if(shipData[i].cid==shipAllInfo[j][o]){
-						delete shipAllInfo[j][n*1+2];
+			};
+		};
+		for (i = 0; i < shipAllInfo.length; i++){
+			for (n in shipAllInfo[i]){
+				let l = 0;
+				for (m in shipAllInfo[i]){
+					if(shipAllInfo[i][n] == shipAllInfo[i][m]){
+						if(l==1){
+							delete shipAllInfo[i][m];
+							l=0;
+						};
+						l++;
 					};
 				};
 			};
