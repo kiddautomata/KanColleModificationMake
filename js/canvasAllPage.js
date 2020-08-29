@@ -4945,10 +4945,10 @@ function canvasCharacterFeatherPage(page, lang, local) {
 					}
 				} else if (page == 'character_up') {
 					if (imgDataN != undefined && imgData[imgData.level].full_x2 == undefined) {
-						switchPageFun('full_x2');
+						switchPageFun('full');
 						return
 					} else if (imgDataD != undefined && imgData[imgData.level].full_dmg_x2 == undefined) {
-						switchPageFun('full_x2');
+						switchPageFun('full');
 						return
 					}
 				};
@@ -5474,10 +5474,10 @@ function canvasRemodelPage(page, lang, local) {
 				imgData.level = this.id;
 				if (page == 'remodel') {
 					if (imgDataN != undefined && imgData[imgData.level].full_x2 == undefined) {
-						switchPageFun('full_x2');
+						switchPageFun('full');
 						return
 					} else if (imgDataD != undefined && imgData[imgData.level].full_dmg_x2 == undefined) {
-						switchPageFun('full_x2');
+						switchPageFun('full');
 						return
 					}
 				};

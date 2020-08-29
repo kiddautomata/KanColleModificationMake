@@ -33,7 +33,7 @@
 			"fontLogo":{
 				"kai":["kai","A","cv","cvKai","kaiA","kaiB","kaiC","kaiD","mod2"],
 				"kaini":[
-					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
+					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp","kainiec",
 					"cvKaini","due","drei","zwei","mk2","mk2mod2","andra"
 					]
 			},
@@ -145,7 +145,7 @@
 			"fontLogo":{
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
-					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特","改二護",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
@@ -216,7 +216,7 @@
 			"fontLogo":{
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
-					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特","改二護",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
@@ -289,7 +289,7 @@
 			"fontLogo":{
 				"kai":["kai","A","CV","CVkai","Akai","Bkai","Ckai","Dkai","Mod.2"],
 				"kaini":[
-					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp",
+					"kaini","kainiA","kainiB","kainiC","kainiD","kainiE","kainisp","kainiec",
 					"cvkaini","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
@@ -361,7 +361,7 @@
 			"fontLogo":{
 				"kai":["改","甲","航","航改","甲改","乙改","丙改","丁改","Mod.2"],
 				"kaini":[
-					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特",
+					"改二","改二甲","改二乙","改二丙","改二丁","改二戌","改二特","改二護",
 					"航改二","due","drei","zwei","Mk.Ⅱ","Mk.ⅡMod.2","andra"
 				]
 			}
