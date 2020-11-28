@@ -91,7 +91,7 @@
 					filesName = findUnderline(filesName);
 					let filesMap = files.webkitRelativePath;
 					let filesShipId, filesShipFolder;
-					let fatherFolderName = filesMap.substring(0, filesMap.indexOf("/"));
+					let fatherFolderName = filesMap.substring(0, filesMap.indexOf("_"));
 					fatherFolderName = findUnderline(fatherFolderName);
 					let mainFolderTextNum = (filesMap.split('/')).length - 1;
 					if (fatherFolderName == 'ship' && mainFolderTextNum == 2) {
